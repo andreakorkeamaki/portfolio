@@ -9,37 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     }, 1500);
 
-    // Initialize custom cursor
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
-
-    document.addEventListener('mousemove', function(e) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        
-        setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        }, 100);
-    });
-
-    // Handle cursor over links and buttons
-    const links = document.querySelectorAll('a, button');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            cursor.style.width = '20px';
-            cursor.style.height = '20px';
-            cursorFollower.style.width = '50px';
-            cursorFollower.style.height = '50px';
-        });
-        link.addEventListener('mouseleave', () => {
-            cursor.style.width = '10px';
-            cursor.style.height = '10px';
-            cursorFollower.style.width = '40px';
-            cursorFollower.style.height = '40px';
-        });
-    });
-
     // Handle header scroll effect
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');

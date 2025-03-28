@@ -3,9 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize GSAP and ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     
-    // Custom cursor
-    initCustomCursor();
-    
     // Loading screen animation
     initLoadingScreen();
     
@@ -21,47 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize form submission
     initContactForm();
 });
-
-// Custom cursor
-function initCustomCursor() {
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
-    
-    document.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.1
-        });
-        
-        gsap.to(cursorFollower, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.3
-        });
-    });
-    
-    // Cursor hover effect for clickable elements
-    const clickables = document.querySelectorAll('a, button, .project, .menu-toggle');
-    
-    clickables.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.style.width = '20px';
-            cursor.style.height = '20px';
-            cursorFollower.style.width = '50px';
-            cursorFollower.style.height = '50px';
-            cursorFollower.style.borderColor = 'rgba(0, 200, 255, 0.4)';
-        });
-        
-        element.addEventListener('mouseleave', () => {
-            cursor.style.width = '10px';
-            cursor.style.height = '10px';
-            cursorFollower.style.width = '40px';
-            cursorFollower.style.height = '40px';
-            cursorFollower.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-        });
-    });
-}
 
 // Loading screen animation
 function initLoadingScreen() {

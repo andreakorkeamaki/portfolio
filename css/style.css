@@ -28,7 +28,6 @@ body {
     background-color: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
-    cursor: none;
     width: 100%;
     position: relative;
 }
@@ -77,30 +76,8 @@ section {
 }
 
 /* Custom Cursor */
-.cursor {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-    mix-blend-mode: difference;
-}
-
-.cursor-follower {
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s ease-out;
-    mix-blend-mode: difference;
+.cursor, .cursor-follower {
+    display: none;
 }
 
 /* Loading Screen */
@@ -604,6 +581,8 @@ input:focus, textarea:focus {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+    max-width: 100%;
+    padding: 0 1rem;
 }
 
 .macro-category {
@@ -612,11 +591,25 @@ input:focus, textarea:focus {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
 }
 
-.macro-category:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+.category-image::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.macro-category:hover .category-image::before {
+    transform: translate(5px, 5px);
 }
 
 .category-image {
@@ -881,13 +874,5 @@ footer {
     /* Improve small mobile experience */
     .hero-content {
         padding: 0 5%;
-    }
-    
-    .cursor, .cursor-follower {
-        display: none;
-    }
-    
-    body {
-        cursor: auto;
     }
 }
