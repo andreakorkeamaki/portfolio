@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Andrea | 3D Renders & Creative Coding</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="Andrea's portfolio showcasing 3D renders and creative coding projects">
+    <meta name="theme-color" content="#0f0f0f">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="loading-screen">
+        <div class="loader">
+            <span class="loader-text">ANDREA</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">ANDREA</div>
+        <nav>
+            <ul>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Creative Coder & 3D Artist">Creative Coder & 3D Artist</h1>
+                <p class="subtitle">Bringing imagination to life through code and 3D visualization</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+            <div class="hero-canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </section>
+
+        <section id="work" class="work">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="projects-grid">
+                <div class="project" data-category="3d">
+                    <div class="project-image">
+                        <img src="img/project1.jpg" alt="3D Render Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Geometric Dreams</h3>
+                                <p>3D Visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" data-category="creative-coding">
+                    <div class="project-image">
+                        <img src="img/project2.jpg" alt="Creative Coding Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Particle Flow</h3>
+                                <p>WebGL Experiment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" data-category="3d">
+                    <div class="project-image">
+                        <img src="img/project3.jpg" alt="3D Render Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Abstract Spaces</h3>
+                                <p>3D Environment Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project" data-category="creative-coding">
+                    <div class="project-image">
+                        <img src="img/project4.jpg" alt="Creative Coding Project">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>Digital Waves</h3>
+                                <p>Audio Visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm Andrea, a passionate 3D artist and creative coder based in Italy. I blend technical expertise with artistic vision to create immersive digital experiences that push the boundaries of what's possible.</p>
+                <p>With a background in both design and programming, I bring a unique perspective to every project, whether it's creating stunning 3D visualizations or developing interactive web experiences.</p>
+                <div class="skills">
+                    <div class="skill-category">
+                        <h3>3D Skills</h3>
+                        <ul>
+                            <li>Blender</li>
+                            <li>Cinema 4D</li>
+                            <li>3D Modeling</li>
+                            <li>Texturing</li>
+                            <li>Lighting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Creative Coding</h3>
+                        <ul>
+                            <li>Three.js</li>
+                            <li>WebGL</li>
+                            <li>GLSL Shaders</li>
+                            <li>p5.js</li>
+                            <li>Processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-container">
+                    <img src="img/profile.jpg" alt="Andrea">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Interested in working together? Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@andrea.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@andrea.com</span>
+                        </a>
+                        <a href="https://instagram.com/andrea" target="_blank" class="contact-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>@andrea</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ANDREA</div>
+            <div class="footer-links">
+                <a href="https://instagram.com/andrea" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/andrea" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/andrea" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="https://github.com/andrea" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Andrea. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+This directory will contain your project images and profile photo.
+
+Replace these placeholder images with your actual 3D renders and creative coding projects.
+
+Suggested images to add:
+- project1.jpg (3D render)
+- project2.jpg (creative coding project)
+- project3.jpg (3D render)
+- project4.jpg (creative coding project)
+- profile.jpg (your profile photo)
