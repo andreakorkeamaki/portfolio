@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+</head>
+<body>
+    <h1>Generating placeholder images...</h1>
+    <canvas id="fractalCanvas" width="800" height="600" style="display:none;"></canvas>
+    <canvas id="chatCanvas" width="800" height="600" style="display:none;"></canvas>
+    <canvas id="legoCanvas" width="800" height="600" style="display:none;"></canvas>
+    
+    <script>
+        // Function to generate a fractal-like image
+        function generateFractalImage() {
+            const canvas = document.getElementById('fractalCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Fill background
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw colorful lines
+            for (let i = 0; i < 50; i++) {
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+                ctx.bezierCurveTo(
+                    Math.random() * canvas.width, Math.random() * canvas.height,
+                    Math.random() * canvas.width, Math.random() * canvas.height,
+                    Math.random() * canvas.width, Math.random() * canvas.height
+                );
+                
+                // Random gradient color
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, `hsl(${Math.random() * 360}, 100%, 50%)`);
+                gradient.addColorStop(1, `hsl(${Math.random() * 360}, 100%, 50%)`);
+                
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = 3 + Math.random() * 5;
+                ctx.stroke();
+            }
+            
+            return canvas.toDataURL('image/jpeg', 0.9);
+        }
+        
+        // Function to generate a chat interface image
+        function generateChatImage() {
+            const canvas = document.getElementById('chatCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Fill background
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw header
+            ctx.fillStyle = '#2a2a2a';
+            ctx.fillRect(0, 0, canvas.width, 60);
+            
+            // Draw chat bubbles
+            for (let i = 0; i < 5; i++) {
+                // User message
+                ctx.fillStyle = '#3a3a3a';
+                ctx.fillRect(20, 80 + i * 100, 400, 40);
+                
+                // Bot message
+                ctx.fillStyle = '#0088cc';
+                ctx.fillRect(canvas.width - 420, 130 + i * 100, 400, 40);
+            }
+            
+            // Draw input field
+            ctx.fillStyle = '#2a2a2a';
+            ctx.fillRect(20, canvas.height - 60, canvas.width - 40, 40);
+            
+            return canvas.toDataURL('image/jpeg', 0.9);
+        }
+        
+        // Function to generate a Lego-like image
+        function generateLegoImage() {
+            const canvas = document.getElementById('legoCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Fill background - sky blue
+            ctx.fillStyle = '#87CEEB';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw ground - green
+            ctx.fillStyle = '#7CFC00';
+            ctx.fillRect(0, canvas.height - 150, canvas.width, 150);
+            
+            // Draw a simple Lego house
+            // Base plate
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(200, canvas.height - 170, 400, 20);
+            
+            // Main structure
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(250, canvas.height - 270, 300, 100);
+            
+            // Roof
+            ctx.fillStyle = '#FF0000';
+            ctx.beginPath();
+            ctx.moveTo(250, canvas.height - 270);
+            ctx.lineTo(400, canvas.height - 350);
+            ctx.lineTo(550, canvas.height - 270);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Window
+            ctx.fillStyle = '#87CEFA';
+            ctx.fillRect(300, canvas.height - 240, 60, 60);
+            
+            // Door
+            ctx.fillStyle = '#8B4513';
+            ctx.fillRect(430, canvas.height - 220, 70, 100);
+            
+            return canvas.toDataURL('image/jpeg', 0.9);
+        }
+        
+        // Generate and download the images
+        window.onload = function() {
+            // Generate images
+            const fractalData = generateFractalImage();
+            const chatData = generateChatImage();
+            const legoData = generateLegoImage();
+            
+            // Create download links
+            const fractalLink = document.createElement('a');
+            fractalLink.href = fractalData;
+            fractalLink.download = 'fractal.jpg';
+            fractalLink.innerHTML = 'Download Fractal Image';
+            document.body.appendChild(fractalLink);
+            document.body.appendChild(document.createElement('br'));
+            
+            const chatLink = document.createElement('a');
+            chatLink.href = chatData;
+            chatLink.download = 'chat-direct.jpg';
+            chatLink.innerHTML = 'Download Chat Image';
+            document.body.appendChild(chatLink);
+            document.body.appendChild(document.createElement('br'));
+            
+            const legoLink = document.createElement('a');
+            legoLink.href = legoData;
+            legoLink.download = 'lego-builder.jpg';
+            legoLink.innerHTML = 'Download Lego Image';
+            document.body.appendChild(legoLink);
+            
+            // Auto-click the links to download
+            fractalLink.click();
+            chatLink.click();
+            legoLink.click();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Project image placeholders */
+.project-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+}
+
+/* Fractal Explorer placeholder */
+.fractal-placeholder {
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fractal-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 200, 255, 0.7) 0%, 
+        rgba(255, 0, 255, 0.7) 25%, 
+        rgba(255, 255, 0, 0.7) 50%, 
+        rgba(0, 255, 0, 0.7) 75%, 
+        rgba(0, 200, 255, 0.7) 100%);
+    mask: repeating-conic-gradient(rgba(0,0,0,0) 0deg, rgba(0,0,0,0) 5deg, rgba(0,0,0,1) 5deg, rgba(0,0,0,1) 10deg);
+    -webkit-mask: repeating-conic-gradient(rgba(0,0,0,0) 0deg, rgba(0,0,0,0) 5deg, rgba(0,0,0,1) 5deg, rgba(0,0,0,1) 10deg);
+    animation: rotate 20s linear infinite;
+}
+
+/* Chat interface placeholder */
+.chat-placeholder {
+    background-color: #1a1a1a;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.chat-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #2a2a2a;
+}
+
+.chat-placeholder::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #2a2a2a;
+}
+
+.chat-bubble {
+    height: 30px;
+    margin: 15px 0;
+    border-radius: 15px;
+}
+
+.chat-bubble:nth-child(odd) {
+    background-color: #3a3a3a;
+    margin-right: 30%;
+}
+
+.chat-bubble:nth-child(even) {
+    background-color: #00c8ff;
+    margin-left: 30%;
+}
+
+/* Lego builder placeholder */
+.lego-placeholder {
+    background-color: #87CEEB;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.lego-ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background-color: #7CFC00;
+}
+
+.lego-base {
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    right: 20%;
+    height: 5px;
+    background-color: #FFFFFF;
+}
+
+.lego-house {
+    position: absolute;
+    bottom: calc(30% + 5px);
+    left: 30%;
+    right: 30%;
+    height: 25%;
+    background-color: #FFFFFF;
+}
+
+.lego-roof {
+    position: absolute;
+    bottom: calc(30% + 5px + 25%);
+    left: 25%;
+    right: 25%;
+    height: 15%;
+    background-color: #FF0000;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
