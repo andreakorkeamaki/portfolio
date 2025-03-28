@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vibecoding | Andrea's Creative Coding Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vibecoding.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta name="description" content="Vibecoding - Andrea's creative coding projects and interactive web experiences">
+    <meta name="theme-color" content="#0f0f0f">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="loading-screen">
+        <div class="loader">
+            <span class="loader-text">VIBECODING</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">ANDREA</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero vibecoding-hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Vibecoding">Vibecoding</h1>
+                <p class="subtitle">Creative coding projects and interactive web experiences</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+            <div class="hero-canvas-container">
+                <canvas id="vibecoding-canvas"></canvas>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Explore my collection of interactive web experiences and creative coding projects</p>
+                
+                <div class="featured-projects">
+                    <div class="featured-project">
+                        <div class="project-image">
+                            <img src="img/project1.jpg" alt="Fractals Explorer">
+                        </div>
+                        <div class="project-content">
+                            <h3>Fractals Explorer</h3>
+                            <p>An interactive WebGL experience that allows you to explore the fascinating world of fractals. Navigate through complex mathematical patterns and discover the beauty of infinite recursion.</p>
+                            <ul class="project-tech">
+                                <li>WebGL</li>
+                                <li>Three.js</li>
+                                <li>GLSL Shaders</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="https://fractals.andrekork.online" target="_blank" class="project-link">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="featured-project reverse">
+                        <div class="project-image">
+                            <img src="img/project2.jpg" alt="AI Assistant">
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Assistant</h3>
+                            <p>A conversational AI interface that provides an intuitive way to interact with artificial intelligence. Ask questions, get recommendations, or just have a chat with this responsive and intelligent assistant.</p>
+                            <ul class="project-tech">
+                                <li>JavaScript</li>
+                                <li>Natural Language Processing</li>
+                                <li>API Integration</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                            <a href="https://aibot.andrekork.online" target="_blank" class="project-link">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="featured-project">
+                        <div class="project-image">
+                            <img src="img/project3.jpg" alt="Lego Builder">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lego Builder</h3>
+                            <p>An interactive 3D web experience that lets you build and customize virtual Lego models. Unleash your creativity in this playful digital environment with realistic physics and lighting.</p>
+                            <ul class="project-tech">
+                                <li>Three.js</li>
+                                <li>WebGL</li>
+                                <li>3D Modeling</li>
+                                <li>Physics Engine</li>
+                            </ul>
+                            <a href="https://lego.andrekork.online" target="_blank" class="project-link">Visit Project <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <h2 class="section-title">Creative Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <h3>Concept</h3>
+                        <p>Every project begins with an idea. I explore concepts that challenge technical boundaries while delivering engaging user experiences.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <h3>Prototype</h3>
+                        <p>Rapid prototyping allows me to test technical feasibility and refine the interaction design before full development.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <h3>Development</h3>
+                        <p>Using modern web technologies, I bring the concept to life with clean code and optimized performance.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <h3>Refinement</h3>
+                        <p>Continuous testing and iteration ensure the final experience is polished, intuitive, and visually stunning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ANDREA</div>
+            <div class="footer-links">
+                <a href="https://instagram.com/andrea" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/andrea" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net/andrea" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="https://github.com/andrea" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Andrea. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vibecoding.js"></script>
+</body>
+</html>
