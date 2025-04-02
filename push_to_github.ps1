@@ -1,5 +1,5 @@
 # Replace these values with your GitHub username and repository name
-$GITHUB_USERNAME = "your-username"
+$GITHUB_USERNAME = "andreakorkeamaki"
 $REPO_NAME = "andrea-portfolio"
 
 # GitHub repository URL
